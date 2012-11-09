@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6bd53fda-71ee-4a20-8b56-b0fd4b049101"
+  name="AdapterModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="6882bae6-015e-482b-a1ed-dfcdbbfaeae0">
+      <body>SpecificRequest()
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="48dfe1c0-c2a8-4b0a-b0ac-37cb6e789dfe"
+          LastKnownName="ClassAdapter"
+          LastKnownLocation="AdapterModel.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="006d17f6-1ccd-490b-8483-6f961292e245">
+      <body>adaptee-&gt;SpecificRequest()</body>
+      <annotatedElements>
+        <classMoniker
+          Id="82f80014-9729-427a-adc4-55122f56e1e5"
+          LastKnownName="ObjectAdapter"
+          LastKnownLocation="AdapterModel.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="48dfe1c0-c2a8-4b0a-b0ac-37cb6e789dfe"
+        name="ClassAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="36478657-4b90-483e-9e1f-cac88b0f4d3a">
+            <interfaceMoniker
+              Id="bef9126d-89b4-4321-8f91-5093cc2554d8"
+              LastKnownName="Target"
+              LastKnownLocation="AdapterModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="966858e1-a33c-448c-8eb8-1d523b3c7cc1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bee9f761-2518-44c0-bedb-aa74e4da2739"
+              LastKnownName="Adaptee"
+              LastKnownLocation="AdapterModel.uml" />
+            <description>Implementation</description>
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f0139d11-2a99-485a-a4a0-c75593527b05"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bee9f761-2518-44c0-bedb-aa74e4da2739"
+        name="Adaptee"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="b984d401-e6d7-440f-a137-e95c4cd68643"
+            name="SpecificRequest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bef9126d-89b4-4321-8f91-5093cc2554d8"
+        name="Target"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="733202f1-8ccb-42ff-bbea-6658b9e62fcc"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="48029524-b921-4216-a768-85b7a4da6848"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ae867ffc-e37b-496c-9393-c7dc8fcff086"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="bef9126d-89b4-4321-8f91-5093cc2554d8"
+              LastKnownName="Target"
+              LastKnownLocation="AdapterModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b288bcc6-ffcf-49fe-8b03-7c41d754ce37"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bb91666c-dee0-44fe-b0b0-d1486c77057e"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="24d20aa9-7d8e-4667-8985-adacddd9fb1b"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d3cb7d42-fb82-4d45-a14e-ed002ba3ea7d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b6e76fca-4510-49b5-858e-7f34ac0d5f35"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="73cb7cfd-c48a-462c-b659-2cc193079476"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="82f80014-9729-427a-adc4-55122f56e1e5"
+        name="ObjectAdapter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a07cb1da-ff96-4319-921a-c99e77630d67">
+            <interfaceMoniker
+              Id="bef9126d-89b4-4321-8f91-5093cc2554d8"
+              LastKnownName="Target"
+              LastKnownLocation="AdapterModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="c54860ce-1965-40b9-9eb2-d49c795c90f0"
+            isDerived="false"
+            sourceEndRoleName="adaptee"
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bee9f761-2518-44c0-bedb-aa74e4da2739"
+              LastKnownName="Adaptee"
+              LastKnownLocation="AdapterModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86b54f1b-07f1-4e83-9448-07a00160ebe3"
+                  name="adaptee"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a269a0cf-d07c-4506-8760-25675ed011c8"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="188c69f4-44c1-44d4-ae4b-0d1df165f43c"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="328fbbe0-7a59-4426-8920-d72fa17928a6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d37c726d-fd99-411b-be44-d38161dd474a"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="87efae13-a2e5-40ed-8094-364a48a09bcd"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="59df85cf-12d2-437c-b6c4-c92c2c98bd31"
+            name="Request"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
